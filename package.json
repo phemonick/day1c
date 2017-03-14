@@ -1,0 +1,12 @@
+{
+  "name": "Day1c",
+  "version": "1.0.0",
+  "description": "",
+  "main": "oop_spec.js",
+  "scripts": {
+    "test": "jasmine oop_spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
