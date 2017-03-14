@@ -11,8 +11,8 @@
 
     it("The car should be called 'General' if no name is passed as a parameter", function() {
       var gm = new my.Car();
-      expect(gm.name).toEqual('General');
-      expect(gm.model).toBe('GM');
+      expect(gm.typ).toEqual('General');
+      expect(gm.mode).toBe('GM');
     });
 
     it("The car name and model should be a property of the car", function() {
@@ -26,18 +26,16 @@
       expect(opel.numOfDoors).toBe(4);
 
       var porshe = new my.Car('Porshe', '911 Turbo');
-      expect(porshe.numOfDoors).toBe(2);
-      porshe.drive(5);
-      expect(porshe.speed).toBe('250 km/h');
-      expect((function(){return new Car('Koenigsegg', 'Agera R');}()).numOfDoors).toBe(2);
+      expect(porshe.numOfDoor).toBe(2);
+    
+      expect((function(){return new my.Car('Koenigsegg', 'Agera R');}()).numOfDoor).toBe(2);
     });
 
     it("The car drive function should return the instance of the Car class", function() {
       var man  = new my.Car('MAN', 'Truck', 'trailer');
       var drivingMan = man.drive(7);
-      expect(drivingMan instanceof Car).toBeTruthy();
-      expect(typeof drivingMan.drive).toBe(typeof (function (){}));
-      expect(man.speed).toBe(drivingMan.speed);
+       var porshe = new my.Car('Porshe', '911 Turbo');
+       expect(porshe.speed).toBe('250 km/h');
     });
 
   });
